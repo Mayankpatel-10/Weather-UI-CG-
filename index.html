@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast - India</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <select class="location-selector" id="location-selector">
+            <option value="mumbai">Mumbai, Maharashtra</option>
+            <option value="delhi" selected>New Delhi, Delhi</option>
+            <option value="bangalore">Bengaluru, Karnataka</option>
+            <option value="hyderabad">Hyderabad, Telangana</option>
+            <option value="ahmedabad">Ahmedabad, Gujarat</option>
+            <option value="chennai">Chennai, Tamil Nadu</option>
+            <option value="kolkata">Kolkata, West Bengal</option>
+            <option value="pune">Pune, Maharashtra</option>
+            <option value="jaipur">Jaipur, Rajasthan</option>
+            <option value="lucknow">Lucknow, Uttar Pradesh</option>
+        </select>
+        
+        <div class="main-content">
+            <div class="primary-section">
+                <div class="weather-card current-weather fade-in">
+                    <div class="location-container">
+                        <span class="location-icon">📍</span>
+                        <div class="location" id="current-location">New Delhi, Delhi</div>
+                    </div>
+                    <div class="time" id="current-time">Monday, June 2, 3:15 PM</div>
+                    <div class="weather-icon-container">
+                        <div class="weather-icon" id="main-weather-icon">🌤️</div>
+                    </div>
+                    <div class="temperature-container">
+                        <div class="temperature" id="main-temperature">42°</div>
+                    </div>
+                    <div class="condition" id="main-condition">Partly Cloudy</div>
+                    <div class="real-feel" id="real-feel">Feels like 47°</div>
+                    <div class="air-quality">
+                        <span class="aqi-label">Air Quality</span>
+                        <span class="aqi-value aqi-poor" id="aqi-value">Poor (156)</span>
+                    </div>
+                </div>
+                
+                <div class="weather-card forecast-section fade-in">
+                    <div class="section-header">
+                        <span class="section-icon">⏰</span>
+                        <div class="section-title">24-Hour Forecast</div>
+                    </div>
+                    <div class="hourly-forecast" id="hourly-forecast">
+                        <div class="hourly-item">
+                            <div class="hourly-time">4 PM</div>
+                            <div class="hourly-icon">🌤️</div>
+                            <div class="hourly-temp">43°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hourly-time">5 PM</div>
+                            <div class="hourly-icon">☀️</div>
+                            <div class="hourly-temp">44°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hourly-time">6 PM</div>
+                            <div class="hourly-icon">☀️</div>
+                            <div class="hourly-temp">42°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hourly-time">7 PM</div>
+                            <div class="hourly-icon">🌅</div>
+                            <div class="hourly-temp">40°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hourly-time">8 PM</div>
+                            <div class="hourly-icon">🌙</div>
+                            <div class="hourly-temp">38°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hourly-time">9 PM</div>
+                            <div class="hourly-icon">🌙</div>
+                            <div class="hourly-temp">36°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hourly-time">10 PM</div>
+                            <div class="hourly-icon">🌙</div>
+                            <div class="hourly-temp">35°</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="secondary-section">
+                <div class="weather-card forecast-section fade-in">
+                    <div class="section-header">
+                        <span class="section-icon">📅</span>
+                        <div class="section-title">7-Day Forecast</div>
+                    </div>
+                    <div class="daily-forecast" id="daily-forecast">
+                        <div class="daily-item">
+                            <div class="daily-left">
+                                <div class="daily-day">Today</div>
+                                <div class="daily-icon">🌤️</div>
+                                <div class="daily-condition">Partly Cloudy</div>
+                            </div>
+                            <div class="daily-temps">
+                                <span class="daily-high">44°</span>
+                                <span class="daily-low">28°</span>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="daily-left">
+                                <div class="daily-day">Tue</div>
+                                <div class="daily-icon">☀️</div>
+                                <div class="daily-condition">Sunny</div>
+                            </div>
+                            <div class="daily-temps">
+                                <span class="daily-high">45°</span>
+                                <span class="daily-low">30°</span>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="daily-left">
+                                <div class="daily-day">Wed</div>
+                                <div class="daily-icon">☀️</div>
+                                <div class="daily-condition">Hot</div>
+                            </div>
+                            <div class="daily-temps">
+                                <span class="daily-high">46°</span>
+                                <span class="daily-low">32°</span>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="daily-left">
+                                <div class="daily-day">Thu</div>
+                                <div class="daily-icon">🌤️</div>
+                                <div class="daily-condition">Partly Cloudy</div>
+                            </div>
+                            <div class="daily-temps">
+                                <span class="daily-high">43°</span>
+                                <span class="daily-low">29°</span>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="daily-left">
+                                <div class="daily-day">Fri</div>
+                                <div class="daily-icon">⛅</div>
+                                <div class="daily-condition">Cloudy</div>
+                            </div>
+                            <div class="daily-temps">
+                                <span class="daily-high">41°</span>
+                                <span class="daily-low">27°</span>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="daily-left">
+                                <div class="daily-day">Sat</div>
+                                <div class="daily-icon">🌧️</div>
+                                <div class="daily-condition">Light Rain</div>
+                            </div>
+                            <div class="daily-temps">
+                                <span class="daily-high">38°</span>
+                                <span class="daily-low">25°</span>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="daily-left">
+                                <div class="daily-day">Sun</div>
+                                <div class="daily-icon">⛈️</div>
+                                <div class="daily-condition">Thunderstorms</div>
+                            </div>
+                            <div class="daily-temps">
+                                <span class="daily-high">35°</span>
+                                <span class="daily-low">23°</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="weather-card details-section fade-in">
+                    <div class="details-header" onclick="toggleDetails()">
+                        <div class="details-title">
+                            <span>🌡️</span>
+                            Weather Details
+                        </div>
+                        <div class="expand-icon" id="expand-icon">▼</div>
+                    </div>
+                    <div class="details-content" id="details-content">
+                        <div class="details-grid" id="details-grid">
+                            <div class="detail-item">
+                                <div class="detail-icon">💧</div>
+                                <div class="detail-label">Humidity</div>
+                                <div class="detail-value">42%</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">💨</div>
+                                <div class="detail-label">Wind Speed</div>
+                                <div class="detail-value">12 km/h</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">🌅</div>
+                                <div class="detail-label">Sunrise</div>
+                                <div class="detail-value">5:24 AM</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">🌇</div>
+                                <div class="detail-label">Sunset</div>
+                                <div class="detail-value">7:18 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
